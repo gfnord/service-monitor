@@ -1,0 +1,18 @@
+Simple monitor script written in python
+
+./service-monitor.py <test-type> <server-info> <email-address>
+
+	test-type    	tcp or http
+	server-info  	hostname:port for tcp
+	             	http://hostname/page for http
+	label	  	label for the service
+	email-address	username or username@domain.com
+
+Just provide all 5 arguments to run the script. Simple like that.
+
+Example:
+
+./service-monitor.py tcp 10.5.1.1:9000 "PHP-FPM running on server01" youremail@example.com
+
+The script will test if the port 9000 is open on server 10.5.1.1. If the port is open, nothing happens. If not,
+you will receive an alert email.
